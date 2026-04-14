@@ -1,15 +1,55 @@
 [gd_scene format=3 uid="uid://b0o2axsf67l8g"]
 
 [ext_resource type="Script" uid="uid://brds263jrmynp" path="res://scripts/jogador.gd" id="1_g1ob3"]
-[ext_resource type="Texture2D" uid="uid://dkbf2rfhlfi84" path="res://assets/icon.svg" id="1_uahlj"]
 [ext_resource type="Shape2D" uid="uid://bm4p86epu167" path="res://assets/colisao_jogador.tres" id="2_g1ob3"]
+[ext_resource type="Texture2D" uid="uid://bylsa8iwpgh6k" path="res://assets/Skins-Player.png" id="3_g1ob3"]
 
 [node name="Jogador" type="CharacterBody2D" unique_id=1150197207]
 script = ExtResource("1_g1ob3")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=402771212]
-texture = ExtResource("1_uahlj")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=24116692]
+visible = false
 position = Vector2(-1, -2)
 shape = ExtResource("2_g1ob3")
+
+[node name="Sprite" type="Node2D" parent="." unique_id=571930770]
+rotation = -1.8173202
+
+[node name="Corpo" type="Sprite2D" parent="Sprite" unique_id=1129290585]
+texture = ExtResource("3_g1ob3")
+region_enabled = true
+region_rect = Rect2(1971, 1365, 197, 105)
+
+[node name="Mochila" type="Sprite2D" parent="Sprite" unique_id=1431893327]
+position = Vector2(16, -64)
+rotation = 0.21844429
+texture = ExtResource("3_g1ob3")
+region_enabled = true
+region_rect = Rect2(1967, 1206, 205, 140)
+
+[node name="Braço Dir" type="Sprite2D" parent="Sprite" unique_id=1698121284]
+position = Vector2(-90, 46)
+texture = ExtResource("3_g1ob3")
+region_enabled = true
+region_rect = Rect2(2421, 1220, 103, 199)
+
+[node name="Braço Esq" type="Sprite2D" parent="Sprite" unique_id=2074454070]
+position = Vector2(32, 99)
+rotation = 0.38973054
+texture = ExtResource("3_g1ob3")
+region_enabled = true
+region_rect = Rect2(2601, 1203, 132, 243)
+
+[node name="Cabeça" type="Sprite2D" parent="Sprite" unique_id=2057850742]
+texture = ExtResource("3_g1ob3")
+region_enabled = true
+region_rect = Rect2(2187, 1194, 165, 165)
+
+[node name="Label" type="Label" parent="." unique_id=1294149952]
+offset_left = -346.0
+offset_top = -258.0
+offset_right = 441.0
+offset_bottom = -191.0
+rotation = 0.0026089083
+theme_override_font_sizes/font_size = 48
+text = "IMPLEMENTAR O SPRITE DA ARMA"
