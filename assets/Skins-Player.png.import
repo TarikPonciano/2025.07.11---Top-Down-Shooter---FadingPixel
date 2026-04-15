@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bylsa8iwpgh6k"
-path="res://.godot/imported/Skins-Playr.png-8f7d9490168d3714ccd3e2cbdaad1e70.ctex"
+path="res://.godot/imported/Skins-Player.png-53e533b7e4abbc2dd9d32504962bd8cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Skins-Playr.png"
-dest_files=["res://.godot/imported/Skins-Playr.png-8f7d9490168d3714ccd3e2cbdaad1e70.ctex"]
+source_file="res://assets/Skins-Player.png"
+dest_files=["res://.godot/imported/Skins-Player.png-53e533b7e4abbc2dd9d32504962bd8cf.ctex"]
 
 [params]
 

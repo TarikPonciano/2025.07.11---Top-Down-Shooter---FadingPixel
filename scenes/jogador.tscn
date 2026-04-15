@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://brds263jrmynp" path="res://scripts/jogador.gd" id="1_g1ob3"]
 [ext_resource type="Shape2D" uid="uid://bm4p86epu167" path="res://assets/colisao_jogador.tres" id="2_g1ob3"]
-[ext_resource type="Texture2D" uid="uid://bylsa8iwpgh6k" path="res://assets/Skins-Playr.png" id="3_g1ob3"]
+[ext_resource type="Texture2D" uid="uid://bylsa8iwpgh6k" path="res://assets/Skins-Player.png" id="3_g1ob3"]
 
 [node name="Jogador" type="CharacterBody2D" unique_id=1150197207]
 script = ExtResource("1_g1ob3")
