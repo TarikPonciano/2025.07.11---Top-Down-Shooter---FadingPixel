@@ -6,8 +6,10 @@ const JUMP_VELOCITY = -400.0
 # Direction vai se referir ao movimento do jogador
 var direction = Vector2(0,0)
 
+# Configura a cena que será usada para criar a bala
 @export var projetil: PackedScene
 
+# Importamos o nó EmissorBala de forma SEGURA com o onready, para capturar a posição do Emissor
 @onready var ponta_arma = $EmissorBala
 
 func _physics_process(delta: float) -> void:
@@ -17,13 +19,19 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 	
+	
+# A função _input é usada para comandos que não são movimento, ou são complexos
 func _input(event: InputEvent) -> void:
+	# Verificar o tipo de ação que o jogador fez e aciona o mecanismo da ação
 	if event.is_action_pressed("atirar"):
 		disparar()
 		
 func disparar():
+	# 1. Cria a bala
 	var nova_bala = projetil.instantiate()
+	# 2. Configura a bala (Posição, Velocidade e Direção)
 	nova_bala.global_position = ponta_arma.global_position
+	# 3. Adiciona a bala na fase atual
 	get_tree().current_scene.add_child(nova_bala)
 
 func mover():
