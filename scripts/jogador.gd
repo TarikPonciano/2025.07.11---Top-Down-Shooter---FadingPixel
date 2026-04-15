@@ -8,6 +8,8 @@ var direction = Vector2(0,0)
 
 @export var projetil: PackedScene
 
+@onready var ponta_arma = $EmissorBala
+
 func _physics_process(delta: float) -> void:
 	
 	rotacionar_corpo()
@@ -20,7 +22,9 @@ func _input(event: InputEvent) -> void:
 		disparar()
 		
 func disparar():
-	pass
+	var nova_bala = projetil.instantiate()
+	nova_bala.global_position = ponta_arma.global_position
+	get_tree().current_scene.add_child(nova_bala)
 
 func mover():
 	
