@@ -11,6 +11,7 @@ var direction = Vector2(0,0)
 
 # Importamos o nó EmissorBala de forma SEGURA com o onready, para capturar a posição do Emissor
 @onready var ponta_arma = $EmissorBala
+@onready var som_tiro = $SomDoTiro
 
 func _physics_process(delta: float) -> void:
 	
@@ -39,6 +40,13 @@ func disparar():
 	
 	# 3. Adiciona a bala na fase atual
 	get_tree().current_scene.add_child(nova_bala)
+	
+	som_tiro.play(1.0)
+	
+	await get_tree().create_timer(0.1).timeout
+	
+	som_tiro.stop()
+	
 	
 	
 func mover():

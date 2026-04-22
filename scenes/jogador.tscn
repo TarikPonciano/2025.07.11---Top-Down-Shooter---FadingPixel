@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cfekyly71jrjx" path="res://scenes/bala.tscn" id="2_s760d"]
 [ext_resource type="Texture2D" uid="uid://bylsa8iwpgh6k" path="res://assets/Skins-Player.png" id="3_g1ob3"]
 [ext_resource type="Texture2D" uid="uid://dva5p0wo6gjab" path="res://assets/Weapons.png" id="4_qcln2"]
+[ext_resource type="AudioStream" uid="uid://bmft1wbawmg6q" path="res://assets/Som-de-Tiro-de-Fuzil-AK-47-barulhos-de-tiros-Efeitos-Sonoros-HD-Sons-e-Efeitos-Efeitos-Sonoros-FX-_y.ogg" id="6_32758"]
 
 [node name="Jogador" type="CharacterBody2D" unique_id=1150197207]
 scale = Vector2(0.25, 0.25)
@@ -60,3 +61,6 @@ region_rect = Rect2(2187, 1194, 165, 165)
 
 [node name="EmissorBala" type="Marker2D" parent="." unique_id=1652561853]
 position = Vector2(360, 0)
+
+[node name="SomDoTiro" type="AudioStreamPlayer2D" parent="." unique_id=332975410]
+stream = ExtResource("6_32758")
