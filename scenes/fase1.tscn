@@ -5,4 +5,4 @@
 [node name="Fase1" type="Node2D" unique_id=1449935687]
 
 [node name="Jogador" parent="." unique_id=1150197207 instance=ExtResource("1_elbe8")]
-position = Vector2(297, 255)
+position = Vector2(273, 273)

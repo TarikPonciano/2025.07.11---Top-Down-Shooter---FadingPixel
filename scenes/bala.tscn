@@ -1,34 +1,54 @@
 [gd_scene format=3 uid="uid://cfekyly71jrjx"]
 
 [ext_resource type="Texture2D" uid="uid://dilgyt1nc40y0" path="res://assets/All_Fire_Bullet_Pixel_16x16_05.png" id="1_27eus"]
+[ext_resource type="Script" uid="uid://d0a2d728m1pch" path="res://scripts/bala.gd" id="1_uu6iy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27eus"]
+atlas = ExtResource("1_27eus")
+region = Rect2(176, 305, 16, 14)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uu6iy"]
 atlas = ExtResource("1_27eus")
-region = Rect2(176, 305, 15, 15)
+region = Rect2(192, 305, 16, 14)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8mjn7"]
 atlas = ExtResource("1_27eus")
-region = Rect2(192, 305, 15, 15)
+region = Rect2(208, 305, 16, 14)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t0bj5"]
 atlas = ExtResource("1_27eus")
-region = Rect2(208, 305, 15, 15)
+region = Rect2(224, 305, 16, 14)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m4et1"]
 atlas = ExtResource("1_27eus")
-region = Rect2(224, 305, 15, 15)
+region = Rect2(240, 305, 16, 14)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7ne2r"]
 atlas = ExtResource("1_27eus")
-region = Rect2(240, 305, 15, 15)
+region = Rect2(256, 305, 16, 14)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d54wb"]
 atlas = ExtResource("1_27eus")
-region = Rect2(256, 305, 15, 15)
+region = Rect2(416, 33, 16, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70a62"]
+atlas = ExtResource("1_27eus")
+region = Rect2(432, 33, 16, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ef64p"]
+atlas = ExtResource("1_27eus")
+region = Rect2(448, 33, 16, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4tot"]
+atlas = ExtResource("1_27eus")
+region = Rect2(464, 33, 16, 14)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_70a62"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27eus")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uu6iy")
 }, {
@@ -43,24 +63,40 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7ne2r")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d54wb")
 }],
 "loop": true,
 "name": &"default",
 "speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d54wb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70a62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ef64p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4tot")
+}],
+"loop": true,
+"name": &"tipo 2",
+"speed": 15.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_27eus"]
 
 [node name="Bala" type="Area2D" unique_id=1822145962]
+script = ExtResource("1_uu6iy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=532602751]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_70a62")
-autoplay = "default"
-frame_progress = 0.9777832
+animation = &"tipo 2"
+autoplay = "tipo 2"
+frame_progress = 0.80280787
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1320977167]
 shape = SubResource("CircleShape2D_27eus")
