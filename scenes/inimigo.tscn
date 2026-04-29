@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://d14lg5fnug4dy"]
+
+[ext_resource type="Script" uid="uid://6finimwy5gru" path="res://scripts/inimigo.gd" id="1_21tsg"]
+[ext_resource type="Texture2D" uid="uid://bylsa8iwpgh6k" path="res://assets/Skins-Player.png" id="1_61lki"]
+[ext_resource type="Texture2D" uid="uid://dva5p0wo6gjab" path="res://assets/Weapons.png" id="2_21tsg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_61lki"]
+size = Vector2(37, 34)
+
+[node name="Inimigo" type="CharacterBody2D" unique_id=149275298]
+script = ExtResource("1_21tsg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1128014046]
+position = Vector2(-1.5, -1)
+shape = SubResource("RectangleShape2D_61lki")
+
+[node name="Sprite" type="Node2D" parent="." unique_id=1100227142]
+visible = false
+position = Vector2(0, -8.000001)
+rotation = -1.8173202
+
+[node name="Corpo" type="Sprite2D" parent="Sprite" unique_id=804997424]
+texture = ExtResource("1_61lki")
+region_enabled = true
+region_rect = Rect2(2971, 1003, 197, 105)
+
+[node name="Mochila" type="Sprite2D" parent="Sprite" unique_id=1001464400]
+position = Vector2(16, -64)
+rotation = 0.2184443
+texture = ExtResource("1_61lki")
+region_enabled = true
+region_rect = Rect2(2971, 850, 197, 132)
+
+[node name="Braço Dir" type="Sprite2D" parent="Sprite" unique_id=1079267110]
+position = Vector2(-90, 46)
+texture = ExtResource("1_61lki")
+region_enabled = true
+region_rect = Rect2(3421, 860, 103, 199)
+
+[node name="Braço Esq" type="Sprite2D" parent="Sprite" unique_id=859809807]
+position = Vector2(32, 99)
+rotation = 0.38973054
+texture = ExtResource("1_61lki")
+region_enabled = true
+region_rect = Rect2(3601, 843, 132, 243)
+
+[node name="Arma" type="Sprite2D" parent="Sprite" unique_id=453813824]
+position = Vector2(-58.5173, 199.75919)
+rotation = 0.24163458
+scale = Vector2(1.0000002, 1.0000002)
+texture = ExtResource("2_21tsg")
+region_enabled = true
+region_rect = Rect2(1113, 459, 68, 336)
+
+[node name="Cabeça" type="Sprite2D" parent="Sprite" unique_id=1703216756]
+texture = ExtResource("1_61lki")
+region_enabled = true
+region_rect = Rect2(3187, 834, 165, 165)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1279162896]
+offset_left = -21.0
+offset_top = -20.0
+offset_right = 19.0
+offset_bottom = 20.0
+color = Color(1, 0, 0, 1)

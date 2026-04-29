@@ -30,6 +30,7 @@ func _input(event: InputEvent) -> void:
 func disparar():
 	# 1. Cria a bala
 	var nova_bala = projetil.instantiate()
+	
 	# 2. Configura a bala (Posição, Direção e Rotação)
 	nova_bala.global_position = ponta_arma.global_position
 	
