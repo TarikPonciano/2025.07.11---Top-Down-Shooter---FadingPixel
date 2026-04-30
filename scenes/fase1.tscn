@@ -6,8 +6,12 @@
 [node name="Fase1" type="Node2D" unique_id=1449935687]
 
 [node name="Jogador" parent="." unique_id=1150197207 instance=ExtResource("1_elbe8")]
+unique_name_in_owner = true
 position = Vector2(273, 273)
 
 [node name="Inimigo" parent="." unique_id=149275298 instance=ExtResource("2_q0yem")]
 position = Vector2(677, 270)
 SPEED = 300.0
+
+[node name="Inimigo2" parent="." unique_id=1258432874 instance=ExtResource("2_q0yem")]
+position = Vector2(703, 151)
