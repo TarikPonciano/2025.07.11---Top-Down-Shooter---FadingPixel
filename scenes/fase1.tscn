@@ -7,8 +7,8 @@
 [node name="Fase1" type="Node2D" unique_id=1449935687]
 script = ExtResource("1_q0yem")
 inimigo_cena = ExtResource("2_q0yem")
-metadata/_edit_horizontal_guides_ = [646.0, -1.0, 650.0]
-metadata/_edit_vertical_guides_ = [-1.0, 1156.0, 1152.0]
+metadata/_edit_horizontal_guides_ = [646.0, -1.0, 650.0, -57.0, 766.0]
+metadata/_edit_vertical_guides_ = [-1.0, 1156.0, 1152.0, 1152.0]
 
 [node name="Jogador" parent="." unique_id=1150197207 instance=ExtResource("1_elbe8")]
 unique_name_in_owner = true
