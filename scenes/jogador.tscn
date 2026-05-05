@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dva5p0wo6gjab" path="res://assets/Weapons.png" id="4_qcln2"]
 [ext_resource type="AudioStream" uid="uid://bmft1wbawmg6q" path="res://assets/Som-de-Tiro-de-Fuzil-AK-47-barulhos-de-tiros-Efeitos-Sonoros-HD-Sons-e-Efeitos-Efeitos-Sonoros-FX-_y.ogg" id="6_32758"]
 
-[node name="Jogador" type="CharacterBody2D" unique_id=1150197207]
+[node name="Jogador" type="CharacterBody2D" unique_id=1150197207 groups=["Amigos"]]
 scale = Vector2(0.25, 0.25)
 script = ExtResource("1_g1ob3")
 projetil = ExtResource("2_s760d")

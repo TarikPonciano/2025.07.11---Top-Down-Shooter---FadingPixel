@@ -7,6 +7,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61lki"]
 size = Vector2(37, 34)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_21tsg"]
+size = Vector2(42, 44)
+
 [node name="Inimigo" type="CharacterBody2D" unique_id=149275298 groups=["Inimigos"]]
 script = ExtResource("1_21tsg")
 
@@ -63,3 +66,12 @@ offset_top = -20.0
 offset_right = 19.0
 offset_bottom = 20.0
 color = Color(1, 0, 0, 1)
+
+[node name="HitBox" type="Area2D" parent="." unique_id=1808190777]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=205489217]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_21tsg")
+debug_color = Color(0.27299523, 0.50181186, 0.999505, 0.41960785)
+
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
