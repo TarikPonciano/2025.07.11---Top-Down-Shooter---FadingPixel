@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://6finimwy5gru" path="res://scripts/inimigo.gd" id="1_21tsg"]
 [ext_resource type="Texture2D" uid="uid://bylsa8iwpgh6k" path="res://assets/Skins-Player.png" id="1_61lki"]
 [ext_resource type="Texture2D" uid="uid://dva5p0wo6gjab" path="res://assets/Weapons.png" id="2_21tsg"]
+[ext_resource type="Texture2D" uid="uid://lr8t5t8jibo1" path="res://assets/Zumbi-Sprite.png" id="4_4er16"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_61lki"]
 size = Vector2(37, 34)
@@ -61,6 +62,7 @@ region_enabled = true
 region_rect = Rect2(3187, 834, 165, 165)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1279162896]
+visible = false
 offset_left = -21.0
 offset_top = -20.0
 offset_right = 19.0
@@ -73,5 +75,34 @@ color = Color(1, 0, 0, 1)
 position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_21tsg")
 debug_color = Color(0.27299523, 0.50181186, 0.999505, 0.41960785)
+
+[node name="Sprite_Zumbi" type="Node2D" parent="." unique_id=309795998]
+rotation = 1.5707964
+scale = Vector2(0.3, 0.3)
+
+[node name="Corpo" type="Sprite2D" parent="Sprite_Zumbi" unique_id=615499898]
+texture = ExtResource("1_61lki")
+region_enabled = true
+region_rect = Rect2(2971, 299, 197, 105)
+
+[node name="Braço Direito" type="Sprite2D" parent="Sprite_Zumbi" unique_id=1442036584]
+position = Vector2(-104, -100)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_4er16")
+region_enabled = true
+region_rect = Rect2(146, 332, 209, 618)
+
+[node name="Braço Esquerdo" type="Sprite2D" parent="Sprite_Zumbi" unique_id=1396650369]
+position = Vector2(104, -103.99999)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_4er16")
+region_enabled = true
+region_rect = Rect2(1645, 332, 209, 618)
+
+[node name="Cabeça" type="Sprite2D" parent="Sprite_Zumbi" unique_id=972525305]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_4er16")
+region_enabled = true
+region_rect = Rect2(819, 873, 434, 426)
 
 [connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]

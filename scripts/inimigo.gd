@@ -8,6 +8,7 @@ func _physics_process(delta: float) -> void:
 	
 	if jogador:
 		mover()
+		look_at(jogador.global_position)
 
 	move_and_slide()
 

@@ -18,4 +18,18 @@ position = Vector2(528, 304)
 wait_time = 0.7
 autostart = true
 
+[node name="Spawners" type="Node" parent="." unique_id=479438887]
+
+[node name="Marker2D" type="Marker2D" parent="Spawners" unique_id=1097147363]
+position = Vector2(194, 156)
+
+[node name="Marker2D2" type="Marker2D" parent="Spawners" unique_id=1305558239]
+position = Vector2(938, 152)
+
+[node name="Marker2D3" type="Marker2D" parent="Spawners" unique_id=1364447333]
+position = Vector2(207, 531)
+
+[node name="Marker2D4" type="Marker2D" parent="Spawners" unique_id=1094235441]
+position = Vector2(961, 546)
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,8 +1,26 @@
 extends Node2D
 
 @export var inimigo_cena: PackedScene
+@onready var spawners = $Spawners
+
 
 func spawn_inimigo():
+	var lista_spawns = spawners.get_children()
+	var spawn = lista_spawns.pick_random()
+	
+	
+	var novo_inimigo = inimigo_cena.instantiate()
+	
+	novo_inimigo.global_position = spawn.global_position
+	novo_inimigo.jogador = %Jogador
+	
+	get_tree().current_scene.add_child(novo_inimigo)
+
+	
+
+#VERSÃO DESCONTINUADA DE SPAWN DO INIMIGO
+func spawn_inimigo_antigo():
+	
 	#Cria uma cópia do inimigo(Cena)
 	var novo_inimigo = inimigo_cena.instantiate()
 	
@@ -21,14 +39,14 @@ func spawn_inimigo():
 	while true:
 		# Verificar se o inimigo está longe o suficiente do jogador
 		if %Jogador.global_position.distance_to(Vector2(posX, posY)) > 100:
-			break
+		
 		
 		# Verificar se o inimigo está spawnando dentro da fase verticalmente
-		if posY >= 0 and posY <= 648:
-			break
+			if posY >= 0 and posY <= 648:
+				
 		# Verificar se o inimigo está spawnando dentro da fase horizontalmente
-		if posX >= 0 and posX <= 1152:
-			break
+				if posX >= 0 and posX <= 1152:
+					break
 			
 		#Gera todas as informações de posição de novo
 		rand_posX = randi_range(-400, 400)

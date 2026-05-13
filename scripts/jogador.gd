@@ -37,7 +37,7 @@ func disparar():
 	# Usa o centro do jogador e a ponta da arma para gerar a direção do tiro
 	nova_bala.direcao = (get_global_mouse_position() - self.global_position).normalized()
 	
-	nova_bala.look_at(get_global_mouse_position())
+	nova_bala.rotation = rotation
 	
 	# 3. Adiciona a bala na fase atual
 	get_tree().current_scene.add_child(nova_bala)
